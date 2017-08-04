@@ -66,7 +66,7 @@ module.exports = function( grunt ) {
 		},
 		jshint: {
 			source: {
-				src: [ "src/**/*.js", "!src/build/**" ],
+				src: [ "src/**/*.js", "!src/build/**", "!src/localize-build/**" ],
 				options: {
 					jshintrc: "src/.jshintrc"
 				}
@@ -92,7 +92,7 @@ module.exports = function( grunt ) {
 			}
 		},
 		jscs: {
-			source: [ "src/**/*.js", "!src/build/**" ],
+			source: [ "src/**/*.js", "!src/build/**", "!src/localize-build/**" ],
 			grunt: "Gruntfile.js",
 			test: [ "test/*.js", "test/functional/**/*.js", "test/unit/**/*.js",
 				"test/compiler/**/*.js", "!test/compiler/_compiled/**" ],
