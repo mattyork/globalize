@@ -1,6 +1,6 @@
 .sizecache.json
 .tmp-globalize-webpack/
-dist/.build/
+dist/
 external/
 node_modules/
 tmp/

@@ -1217,7 +1217,7 @@ QUnit.test( "should parse date according to passed timeZone in various datetime 
 
 	// PDT
 	assert.dateParseWithTimezone(
-		"3/12/2017 3:00 AM",
+		"3/12/2017 2:00 AM",
 		"M/d/y h:mm a",
 		"America/Los_Angeles",
 		cldr,
