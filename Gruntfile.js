@@ -30,8 +30,8 @@ module.exports = function( grunt ) {
 		concat: {
 			messages: {
 				src: [
-					"dist/globalize-runtime/numbers.js",
-					"dist/globalize-runtime/dates.js",
+					"dist/globalize-runtime/number.js",
+					"dist/globalize-runtime/date.js",
 					"dist/globalize-runtime/relative-time.js",
 					"dist/globalize-runtime/unit.js"
 				],
@@ -40,7 +40,7 @@ module.exports = function( grunt ) {
 			formatters: {
 				src: [
 					"dist/globalize-runtime.js",
-					"dist/globalize-runtime/messages.js",
+					"dist/globalize-runtime/message.js",
 					"dist/globalize-runtime/plural.js"
 				],
 				dest: "localize/globalize-messages-runtime.js"
