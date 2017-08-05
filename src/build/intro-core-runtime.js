@@ -13,24 +13,14 @@
  * Globalize Runtime v@VERSION @DATE Released under the MIT license
  * http://git.io/TrdQbw
  */
+/* globals global, localizeGlobalNamespace, process, window */
+if ("undefined" !== typeof process && "node" === process.release.name) {
+  global.localizeGlobalNamespace = global;
+} else {
+  window.localizeGlobalNamespace = window;
+}
 (function( root, factory ) {
-
-	"use strict";
-
-	// UMD returnExports
-	if ( typeof define === "function" && define.amd ) {
-
-		// AMD
-		define( factory );
-	} else if ( typeof exports === "object" ) {
-
-		// Node, CommonJS
-		module.exports = factory();
-	} else {
-
-		// Globalize
-		root.Globalize = factory();
-	}
-}( this, function() {
+  root.TabGlobalize = factory();
+}(localizeGlobalNamespace, function() {
 
 "use strict";

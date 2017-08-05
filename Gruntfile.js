@@ -27,6 +27,25 @@ module.exports = function( grunt ) {
 	}
 
 	grunt.initConfig({
+		concat: {
+			messages: {
+				src: [
+					"dist/globalize-runtime/numbers.js",
+					"dist/globalize-runtime/dates.js",
+					"dist/globalize-runtime/relative-time.js",
+					"dist/globalize-runtime/unit.js"
+				],
+				dest: "localize/globalize-formatters-and-parsers-runtime.js"
+			},
+			formatters: {
+				src: [
+					"dist/globalize-runtime.js",
+					"dist/globalize-runtime/messages.js",
+					"dist/globalize-runtime/plural.js"
+				],
+				dest: "localize/globalize-messages-runtime.js"
+			}
+		},
 		pkg: pkg,
 		authors: {
 			order: "count"
@@ -613,7 +632,13 @@ module.exports = function( grunt ) {
 					"tmp/globalize-runtime/relative-time.min.js": [
 						"dist/globalize-runtime/relative-time.js"
 					],
-					"tmp/globalize-runtime/unit.min.js": [ "dist/globalize-runtime/unit.js" ]
+					"tmp/globalize-runtime/unit.min.js": [ "dist/globalize-runtime/unit.js" ],
+					"localize/globalize-formatters-and-parsers-runtime.min.js": [
+						"localize/globalize-formatters-and-parsers-runtime.js"
+					 ],
+					"localize/globalize-messages-runtime.min.js": [
+						"localize/globalize-messages-runtime.js"
+					]
 				}
 			}
 		},
@@ -688,6 +713,28 @@ module.exports = function( grunt ) {
 		"uglify",
 		"compare_size",
 		"commitplease"
+	]);
+
+	grunt.registerTask( "localize", [
+		"jshint:grunt",
+		"jshint:source",
+		"jshint:test",
+		"jscs:grunt",
+		"jscs:source",
+
+		// TODO fix issues, enable
+		//"jscs:test",
+		"test:unit",
+		"clean",
+		"requirejs",
+		"copy",
+		"jshint:dist",
+
+		// TODO fix issues, enable
+		// "jscs:dist",
+		"test:functional",
+		"concat",
+		"uglify"
 	]);
 
 };

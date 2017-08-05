@@ -14,26 +14,8 @@
  * http://git.io/TrdQbw
  */
 (function( root, factory ) {
-
-	"use strict";
-
-	// UMD returnExports
-	if ( typeof define === "function" && define.amd ) {
-
-		// AMD
-		define([
-			"../globalize-runtime"
-		], factory );
-	} else if ( typeof exports === "object" ) {
-
-		// Node, CommonJS
-		module.exports = factory( require( "../globalize-runtime" ) );
-	} else {
-
-		// Extend global
-		factory( root.Globalize );
-	}
-}(this, function( Globalize ) {
+  factory( root.TabGlobalize );
+}(localizeGlobalNamespace, function( Globalize ) {
 
 "use strict";
 

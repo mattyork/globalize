@@ -2,6 +2,7 @@
 .tmp-globalize-webpack/
 dist/
 external/
+localize/
 node_modules/
 tmp/
 test/compiler/_compiled/
