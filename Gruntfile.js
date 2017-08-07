@@ -35,7 +35,7 @@ module.exports = function( grunt ) {
 					"dist/globalize-runtime/relative-time.js",
 					"dist/globalize-runtime/unit.js"
 				],
-				dest: "localize/globalize-formatters-and-parsers-runtime.js"
+				dest: "localize/globalize-formatters-and-parsers-runtime.debug.js"
 			},
 			formatters: {
 				src: [
@@ -43,7 +43,7 @@ module.exports = function( grunt ) {
 					"dist/globalize-runtime/message.js",
 					"dist/globalize-runtime/plural.js"
 				],
-				dest: "localize/globalize-messages-runtime.js"
+				dest: "localize/globalize-messages-runtime.debug.js"
 			}
 		},
 		pkg: pkg,
@@ -633,11 +633,11 @@ module.exports = function( grunt ) {
 						"dist/globalize-runtime/relative-time.js"
 					],
 					"tmp/globalize-runtime/unit.min.js": [ "dist/globalize-runtime/unit.js" ],
-					"localize/globalize-formatters-and-parsers-runtime.min.js": [
-						"localize/globalize-formatters-and-parsers-runtime.js"
+					"localize/globalize-formatters-and-parsers-runtime.js": [
+						"localize/globalize-formatters-and-parsers-runtime.debug.js"
 					 ],
-					"localize/globalize-messages-runtime.min.js": [
-						"localize/globalize-messages-runtime.js"
+					"localize/globalize-messages-runtime.js": [
+						"localize/globalize-messages-runtime.debug.js"
 					]
 				}
 			}

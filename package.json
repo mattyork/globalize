@@ -1,6 +1,6 @@
 {
   "name": "globalize",
-  "version": "1.3.0",
+  "version": "1.3.0-tableau.0",
   "description": "A JavaScript library for internationalization and localization that leverages the official Unicode CLDR JSON data.",
   "keywords": [
     "utility",
@@ -75,7 +75,7 @@
   "devDependencies": {
     "cldr-data-downloader": "^0.2.5",
     "glob": "^7.1.1",
-    "globalize-compiler": "^0.3.0-alpha.6",
+    "globalize-compiler": "^1.0.0",
     "grunt": "0.4.5",
     "grunt-check-dependencies": "0.6.0",
     "grunt-commitplease": "0.0.5",

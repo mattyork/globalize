@@ -763,3 +763,7 @@ Build the distribution files after having installed the external development dep
 ```bash
 grunt
 ```
+
+### Tableau Localize
+
+We've added a step to output the Localize-specific Globalize files so you don't have to build them by hand. Run `grunt localize`, then `cp -r localize <path-to-your-localize-directory>` and it will copy minified and unminified files of `globalize-formatters-and-parsers-runtime.debug.js` and `globalize-messages-runtime.js` into the `vendor` directory of Localize.
